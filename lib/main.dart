@@ -10,7 +10,7 @@ class BiodataApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Biodata Nabillatun Nafista',
+      title: 'Profil Nabillatun Nafista',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
@@ -52,10 +52,10 @@ class BiodataScreen extends StatelessWidget {
                 margin: const EdgeInsets.only(bottom: 20),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(color: milkChocolate.withOpacity(0.3), width: 4),
+                  border: Border.all(color: milkChocolate.withValues(alpha: 0.3), width: 4),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
+                      color: Colors.black.withValues(alpha: 0.05),
                       blurRadius: 20,
                       spreadRadius: 2,
                     ),
@@ -90,14 +90,14 @@ class BiodataScreen extends StatelessWidget {
               _buildInfoCard('D3 Teknik Informatika', chocolateColor),
               
               const SizedBox(height: 25),
-              _buildLabelText('About me...', chocolateColor),
+              _buildLabelText('About me', chocolateColor),
               Container(
                 width: double.infinity,
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: const Color(0xFFF8F3EE),
                   borderRadius: BorderRadius.circular(15),
-                  border: Border.all(color: chocolateColor.withOpacity(0.1)),
+                  border: Border.all(color: chocolateColor.withValues(alpha: 0.1)),
                 ),
                 child: const Text(
                   'Hallo! Saya Nabillatun Nafista, seorang mahasiswa Teknik Informatika yang memiliki antusiasme tinggi di dunia teknologi dan pengembangan digital. Saya sangat menikmati proses belajar hal-hal baru, mulai dari menyusun logika pemrograman hingga mengeksplorasi desain antarmuka yang menarik.',
@@ -154,7 +154,7 @@ class BiodataScreen extends StatelessWidget {
           style: TextStyle(
             fontSize: 14, 
             fontWeight: FontWeight.w600, 
-            color: textColor.withOpacity(0.7)
+            color: textColor.withValues(alpha: 0.7)
           )
         ),
       ),
@@ -168,7 +168,7 @@ class BiodataScreen extends StatelessWidget {
       decoration: BoxDecoration(
         color: const Color(0xFFF8F3EE),
         borderRadius: BorderRadius.circular(15),
-        border: Border.all(color: textColor.withOpacity(0.1)),
+        border: Border.all(color: textColor.withValues(alpha: 0.1)),
       ),
       child: Text(
         text, 
